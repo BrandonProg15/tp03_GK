@@ -15,9 +15,18 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        Discografia.InicializarDiscos();
+        ViewBag.Discos = Discografia.Discos; 
         return View();
     }
-
+    public IActionResult SelectDisco(int id)
+    {
+        if(Discografia.Discos.ContainsKey(id)){
+            ViewBag.Discos = Discografia.Discos[id];
+            ViewBag.id=id;
+        }
+        return View("infoDatosPersonales");
+    }
     public IActionResult Privacy()
     {
         return View();

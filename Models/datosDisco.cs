@@ -1,4 +1,4 @@
-namespace tp03_gk.Models; 
+
 public class datosDisco 
 {
     public string NombreArtista { get; private set; }
@@ -9,10 +9,11 @@ public class datosDisco
     public string foto {get; private set;}
 
 
- public datosDisco(string NombreArtista, string NombreProductor, List<string> Canciones, int id, string foto)
+ public datosDisco(string NombreArtista, string NombreProductor, string GeneroMusical, List<string> Canciones, int id, string foto)
     {
         this.NombreArtista=NombreArtista;
         this.NombreProductor = NombreProductor;
+        this.GeneroMusical = GeneroMusical; 
         this.Canciones=Canciones;
         this.id=id;
         this.foto=foto; 
